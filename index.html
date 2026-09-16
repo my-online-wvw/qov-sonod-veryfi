@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>অনলাইন সনদ যাচাই</title>
+    <title>অনলাইন সনদ যাচাই ও নিউজ বুলেটিন পোর্টাল</title>
     <!-- Open Graph Meta Tags for Link Sharing -->
-    <meta property="og:title" content="অনলাইন সনদ যাচাই">
-    <meta property="og:description" content="ইউনিয়ন ও পৌরসভার অনলাইন সনদ যাচাইকরণ পোর্টাল">
+    <meta property="og:title" content="অনলাইন সনদ যাচাই ও নিউজ বুলেটিন">
+    <meta property="og:description" content="ইউনিয়ন ও পৌরসভার অনলাইন সনদ যাচাইকরণ এবং লাইভ আপডেট পোর্টাল">
     <meta property="og:type" content="website">
     <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
@@ -14,7 +14,7 @@
     .container { width: 100%; max-width: 420px; background: #ffffff; border: 1px solid #ccc; position: relative; min-height: 100vh; }
 
     .top-banner { background-color: #7bc043; height: 32px; overflow: hidden; position: relative; display: flex; align-items: center; }
-    .running-line { white-space: nowrap; color: #4a154b; font-weight: bold; font-size: 13px; position: absolute; animation: marquee 12s linear infinite; }
+    .running-line { white-space: nowrap; color: #4a154b; font-weight: bold; font-size: 13px; position: absolute; animation: marquee 14s linear infinite; }
     @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
     .logo-area { text-align: center; padding: 10px 0 6px 0; }
@@ -62,13 +62,21 @@
     .footer-msg { font-size: 11px; color: #333; margin-bottom: 8px; }
     .footer-links-grid { display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding-top: 6px; font-size: 11px; color: #222; font-weight: bold; }
 
-    /* Bottom News Bulletin Section Styles ( একদম নিচে দেখানোর জন্য ) */
-    .bottom-news-section { background: #f8fafc; border-top: 2px solid #7bc043; padding: 12px; }
-    .bottom-news-title { font-size: 13px; font-weight: bold; color: #7A288A; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
-    .bottom-news-card { background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #7A288A; padding: 8px 10px; margin-bottom: 6px; border-radius: 3px; }
-    .bottom-news-date { font-size: 9px; color: #666; margin-bottom: 2px; font-weight: bold; }
-    .bottom-news-headline { font-size: 11px; color: #333; line-height: 1.3; text-decoration: none; display: block; }
-    .bottom-news-headline:hover { color: #7A288A; text-decoration: underline; }
+    /* ========================================================= */
+    /* উন্নত নিউজ বুলেটিন ও লাইভ আপডেট সেকশন (একদম নিচে) */
+    /* ========================================================= */
+    .bottom-news-section { background: #fffbeb; border-top: 3px solid #d97706; padding: 14px 12px; }
+    .news-header-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #fcd34d; padding-bottom: 5px; }
+    .news-title-text { font-size: 13px; font-weight: bold; color: #b45309; display: flex; align-items: center; gap: 5px; }
+    .live-badge { background-color: #dc2626; color: #fff; font-size: 9px; padding: 2px 6px; border-radius: 10px; font-weight: bold; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+
+    .news-ticker-wrap { background: #ffffff; border: 1px solid #fde68a; border-radius: 4px; padding: 8px; margin-bottom: 10px; }
+    .news-ticker-item { font-size: 11px; color: #1e293b; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px dashed #e2e8f0; }
+    .news-ticker-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .news-date-tag { background: #fef3c7; color: #b45309; font-size: 9px; padding: 1px 4px; border-radius: 2px; font-weight: bold; margin-right: 4px; }
+    .news-link { color: #0369a1; text-decoration: none; font-weight: 500; }
+    .news-link:hover { text-decoration: underline; color: #0284c7; }
   </style>
   </head>
   <body>
@@ -219,18 +227,28 @@
         </div>
       </div>
 
-      <!-- একদম শেষ অংশে (ফুটারের নিচে) বাংলা নিউজ বুলেটিন ও আপডেট -->
+      <!-- একদম শেষ অংশে আকর্ষণীয় বাংলা নিউজ বুলেটিন ও লাইভ আপডেট -->
       <div class="bottom-news-section">
-        <div class="bottom-news-title">📢 বাংলা নিউজ বুলেটিন ও লাইভ আপডেট</div>
-        
-        <div class="bottom-news-card">
-          <div class="bottom-news-date">আপডেট: আজ</div>
-          <a href="#" class="bottom-news-headline" onclick="alert('বিস্তারিত পড়তে শীঘ্রই নিউজ পেজে রিডাইরেক্ট করা হবে।'); return false;">ইউনিয়ন ডিজিটাল সেন্টারের মাধ্যমে সকল নাগরিক সেবা এখন আরও সহজ ও গতিশীল করা হয়েছে।</a>
+        <div class="news-header-title">
+          <div class="news-title-text">📢 বাংলা নিউজ বুলেটিন ও লাইভ আপডেট</div>
+          <div class="live-badge">LIVE</div>
         </div>
+        
+        <div class="news-ticker-wrap">
+          <div class="news-ticker-item">
+            <span class="news-date-tag">আজ</span>
+            <a href="#" class="news-link" onclick="alert('খবরটির বিস্তারিত খুব শীঘ্রই যোগ করা হবে।'); return false;">ইউনিয়ন ডিজিটাল সেন্টারের মাধ্যমে সকল নাগরিক সেবা এখন আরও সহজ ও গতিশীল করা হয়েছে।</a>
+          </div>
 
-        <div class="bottom-news-card">
-          <div class="bottom-news-date">সাম্প্রতিক ঘোষণা</div>
-          <a href="#" class="bottom-news-headline" onclick="alert('বিস্তারিত পড়তে শীঘ্রই নিউজ পেজে রিডাইরেক্ট করা হবে।'); return false;">অনলাইন উত্তরাধিকার সনদ যাচাই পোর্টাল থেকে কিউআর কোড স্ক্যান করে তথ্য নিশ্চিত করা যাবে।</a>
+          <div class="news-ticker-item">
+            <span class="news-date-tag">ঘোষণা</span>
+            <a href="#" class="news-link" onclick="alert('খবরটির বিস্তারিত খুব শীঘ্রই যোগ করা হবে।'); return false;">অনলাইন উত্তরাধিকার সনদ যাচাই পোর্টাল থেকে কিউআর কোড স্ক্যান করে তথ্য নিশ্চিত করা যাবে।</a>
+          </div>
+
+          <div class="news-ticker-item">
+            <span class="news-date-tag">জরूरी নোটিশ</span>
+            <a href="#" class="news-link" onclick="alert('খবরটির বিস্তারিত খুব শীঘ্রই যোগ করা হবে।'); return false;">শেরপুর জেলার সকল ইউনিয়নের সনদ সংক্রান্ত যেকোনো সহায়তায় সংশ্লিষ্ট সচিবের সাথে যোগাযোগ করুন।</a>
+          </div>
         </div>
       </div>
 
